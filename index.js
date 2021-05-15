@@ -8,6 +8,23 @@ function map (srcArr, func) {
 
     return response;
   }
+
+  function reduce (srcArr, func, startingPoint = 0) {
+  	let newValue = startingPoint;
+      for (let i = 0; i < srcArr.length; i++ ) {
+          if(srcArr[i] === false){
+              newValue = false;
+              continue
+          } else if (srcArr[i] === true){
+              newValue = true;
+              continue
+          }
+        newValue = func(srcArr[i],newValue);
+      }
+      return newValue;
+  }
+
+  
 /*
 function map (array, func) {
     let r = [];
