@@ -24,7 +24,7 @@ function map (srcArr, func) {
       return newValue;
   }
 
-  
+
 /*
 function map (array, func) {
     let r = [];
