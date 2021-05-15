@@ -23,4 +23,3 @@ function map (srcArr, func) {
       }
       return newValue;
   }
-
