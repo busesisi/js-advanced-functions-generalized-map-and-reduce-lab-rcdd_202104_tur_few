@@ -10,16 +10,16 @@ function map (srcArr, func) {
   }
 
   function reduce (srcArr, func, startingPoint = 0) {
-  	let newValue = startingPoint;
+  	let resp = startingPoint;
       for (let i = 0; i < srcArr.length; i++ ) {
           if(srcArr[i] === false){
-              newValue = false;
+              resp = false;
               continue
           } else if (srcArr[i] === true){
-              newValue = true;
+              resp = true;
               continue
           }
-        newValue = func(srcArr[i],newValue);
+        resp = func(srcArr[i],resp);
       }
-      return newValue;
+      return resp;
   }
